@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="928.0" prefWidth="1159.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+       <ImageView fitHeight="1682.0" fitWidth="1176.0" layoutY="-92.0" pickOnBounds="true" AnchorPane.bottomAnchor="-662.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-17.0" AnchorPane.topAnchor="-92.0">
+           <image>
+               <Image url="@img/2.png" />
+           </image>
+       </ImageView>
+       <Label alignment="CENTER" layoutX="296.0" layoutY="32.0" opacity="0.89" text="Knapsack  Problem" textAlignment="CENTER" textFill="#0f2a70" AnchorPane.topAnchor="32.0">
+           <font>
+               <Font name="Acme Regular" size="76.0" />
+           </font>
+       </Label>
+       <JFXButton fx:id="button_insert" buttonType="RAISED" layoutX="89.0" layoutY="192.0" onAction="#addObject" prefHeight="40.0" prefWidth="207.0" style="-fx-background-color: #f5f5f5;" text="Insérer un objet ...." textAlignment="CENTER">
+           <font>
+               <Font name="Amaranth Bold" size="20.0" />
+           </font>
+       </JFXButton>
+      <ScrollPane fx:id="scrollable_list" layoutX="154.0" layoutY="276.0" maxHeight="620.0" maxWidth="800.0" minWidth="500.0">
+         <content>
+             <VBox fx:id="list_objects" />
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="724.0" layoutY="480.0" opacity="0.89" prefHeight="26.0" prefWidth="239.0" text="Capacité maximale (W) :" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="capacite" alignment="CENTER" focusColor="BLACK" layoutX="963.0" layoutY="473.0" prefHeight="40.0" prefWidth="140.0" unFocusColor="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="button_calculer" buttonType="RAISED" layoutX="862.0" layoutY="627.0" onAction="#calculer" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #f5f5f5;" text="Cacluler" textAlignment="CENTER">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="770.0" layoutY="730.0" opacity="0.89" prefHeight="26.0" prefWidth="154.0" text="Gain maximal :" textFill="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="resultat_gain_max" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="923.0" layoutY="723.0" prefHeight="40.0" prefWidth="125.0" unFocusColor="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="770.0" layoutY="786.0" opacity="0.89" prefHeight="26.0" prefWidth="142.0" text="Poids atteint :" textFill="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="resultat_poids_max" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="923.0" layoutY="779.0" prefHeight="40.0" prefWidth="125.0" unFocusColor="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="897.0" layoutY="109.0" text="- By Mohamed Benchohra">
+         <font>
+            <Font name="Acme Regular" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="button_return" fitHeight="82.0" fitWidth="62.0" layoutX="42.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="222.0" fitWidth="282.0" layoutX="810.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/4.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
