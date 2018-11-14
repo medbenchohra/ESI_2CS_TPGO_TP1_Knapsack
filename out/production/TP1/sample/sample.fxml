@@ -22,7 +22,7 @@
                <Font name="Acme Regular" size="76.0" />
            </font>
        </Label>
-       <JFXButton fx:id="button_insert" buttonType="RAISED" layoutX="89.0" layoutY="192.0" onAction="#addObject" prefHeight="40.0" prefWidth="207.0" style="-fx-background-color: #f5f5f5;" text="Insérer un objet ...." textAlignment="CENTER">
+       <JFXButton fx:id="button_insert" buttonType="RAISED" layoutX="89.0" layoutY="192.0" onAction="#addObject" prefHeight="40.0" prefWidth="207.0" style="-fx-background-color: #f5f5f5;" text="Insert un object ...." textAlignment="CENTER">
            <font>
                <Font name="Amaranth Bold" size="20.0" />
            </font>
@@ -32,7 +32,7 @@
              <VBox fx:id="list_objects" />
          </content>
       </ScrollPane>
-      <Label alignment="CENTER" layoutX="724.0" layoutY="480.0" opacity="0.89" prefHeight="26.0" prefWidth="239.0" text="Capacité maximale (W) :" textAlignment="CENTER" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="724.0" layoutY="480.0" opacity="0.89" prefHeight="26.0" prefWidth="239.0" text="Maximum Capacity (W) :" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Amaranth Bold" size="20.0" />
          </font>
@@ -42,27 +42,27 @@
             <Font name="Amaranth Bold" size="20.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="button_calculer" buttonType="RAISED" layoutX="862.0" layoutY="627.0" onAction="#calculer" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #f5f5f5;" text="Cacluler" textAlignment="CENTER">
+      <JFXButton fx:id="button_calculer" buttonType="RAISED" layoutX="862.0" layoutY="627.0" onAction="#calculer" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: #f5f5f5;" text="Calculate" textAlignment="CENTER">
          <font>
             <Font name="Amaranth Bold" size="20.0" />
          </font>
       </JFXButton>
-      <Label layoutX="770.0" layoutY="730.0" opacity="0.89" prefHeight="26.0" prefWidth="154.0" text="Gain maximal :" textFill="WHITE">
+      <Label layoutX="770.0" layoutY="714.0" opacity="0.89" prefHeight="26.0" prefWidth="154.0" text="Maximum Gain :" textFill="WHITE">
          <font>
             <Font name="Amaranth Bold" size="20.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="resultat_gain_max" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="923.0" layoutY="723.0" prefHeight="40.0" prefWidth="125.0" unFocusColor="WHITE">
+      <JFXTextField fx:id="resultat_gain_max" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="923.0" layoutY="707.0" prefHeight="40.0" prefWidth="125.0" unFocusColor="WHITE">
          <font>
             <Font name="Amaranth Bold" size="20.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="770.0" layoutY="786.0" opacity="0.89" prefHeight="26.0" prefWidth="142.0" text="Poids atteint :" textFill="WHITE">
+      <Label layoutX="770.0" layoutY="770.0" opacity="0.89" prefHeight="26.0" prefWidth="142.0" text="Used weight :" textFill="WHITE">
          <font>
             <Font name="Amaranth Bold" size="20.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="resultat_poids_max" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="923.0" layoutY="779.0" prefHeight="40.0" prefWidth="125.0" unFocusColor="WHITE">
+      <JFXTextField fx:id="resultat_poids_max" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="923.0" layoutY="763.0" prefHeight="40.0" prefWidth="125.0" unFocusColor="WHITE">
          <font>
             <Font name="Amaranth Bold" size="20.0" />
          </font>
@@ -82,5 +82,20 @@
             <Image url="@img/4.png" />
          </image>
       </ImageView>
+      <Label layoutX="770.0" layoutY="826.0" opacity="0.89" prefHeight="26.0" prefWidth="125.0" text="Used weight :" textFill="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="resultat_poids_wasted" alignment="CENTER" editable="false" focusColor="BLACK" layoutX="923.0" layoutY="819.0" prefHeight="40.0" prefWidth="125.0" unFocusColor="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="793.0" layoutY="847.0" opacity="0.89" prefHeight="26.0" prefWidth="80.0" text="(wasted)" textFill="WHITE">
+         <font>
+            <Font name="Amaranth Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

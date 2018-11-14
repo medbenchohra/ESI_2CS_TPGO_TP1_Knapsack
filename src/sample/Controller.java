@@ -52,6 +52,10 @@ public class Controller {
     private JFXTextField resultat_poids_max;
 
     @FXML
+    private JFXTextField resultat_poids_wasted;
+
+
+    @FXML
     private ImageView button_return;
 
     Stage stage;
@@ -68,7 +72,7 @@ public class Controller {
         line.setPadding(new Insets(5,5,5,5));
 
         int a = 20;
-        Label labelWeight = new Label(" Objet N° " + objectsNumber + ",    Poids : ");
+        Label labelWeight = new Label(" Object N° " + objectsNumber + ",    Weight : ");
         labelWeight.setFont(new Font("Amaranth", a));
         labelWeight.setStyle("-fx-font-weight: bold ; -fx-font-family: Amaranth ;");
 
@@ -164,6 +168,7 @@ public class Controller {
 
         resultat_gain_max.setText("" + p[n][w]);
         resultat_poids_max.setText("" + maxWeight);
+        resultat_poids_wasted.setText("" + (w - maxWeight));
 
 
         // Coloring chosen and non-chosen objects
@@ -182,6 +187,7 @@ public class Controller {
             capacite.setText("");
             resultat_poids_max.setText("");
             resultat_gain_max.setText("");
+            resultat_poids_wasted.setText("");
             list_objects.getChildren().clear();
             objectsNumber = 0;
         });
