@@ -109,15 +109,17 @@ public class Controller {
         // Maximum weight supported by the knapsack
         int w = Integer.valueOf(capacite.getText().trim());
 
-
         Thing[] things = new Thing[objectsNumber + 1];
         things[0] = null;  // Putting first case to null (for readability)
 
-        int tmpWeight, tmpGain;
+        int tmpWeight = 0, tmpGain = 0;
+        String tmpWeightString, tmpGainString;
         Scene scene = button_insert.getScene();
         for (int i = 1; i <= objectsNumber; i++) {
-            tmpWeight = Integer.valueOf(((JFXTextField) scene.lookup("#weight_" + i)).getText().trim());
-            tmpGain = Integer.valueOf(((JFXTextField) scene.lookup("#gain_" + i)).getText().trim());
+            tmpWeightString = ((JFXTextField) scene.lookup("#weight_" + i)).getText().trim();
+            tmpWeight = Integer.valueOf(tmpWeightString);
+            tmpGainString = ((JFXTextField) scene.lookup("#gain_" + i)).getText().trim();
+            tmpGain = Integer.valueOf(tmpGainString);
             things[i] = new Thing(tmpWeight, tmpGain);
         }
 
@@ -140,7 +142,6 @@ public class Controller {
 
                     if(gainWithout < gainWith) {
                         p[i][j] = gainWith;
-
                     }else {
                         p[i][j] = gainWithout;
                     }
@@ -158,7 +159,7 @@ public class Controller {
         }
 
         // Finding the maximum weight to be carried in the knapsack
-        int maxWeight = w;
+        int maxWeight = 0;
         for (int i = w; i > 0; i--) {
             if(p[n][i-1] != p[n][i]) {
                 maxWeight = i;
@@ -166,9 +167,11 @@ public class Controller {
             }
         }
 
+        int wastedWeight = w - maxWeight;
+
         resultat_gain_max.setText("" + p[n][w]);
         resultat_poids_max.setText("" + maxWeight);
-        resultat_poids_wasted.setText("" + (w - maxWeight));
+        resultat_poids_wasted.setText("" + wastedWeight);
 
 
         // Coloring chosen and non-chosen objects

@@ -82,7 +82,7 @@
             <Image url="@img/4.png" />
          </image>
       </ImageView>
-      <Label layoutX="770.0" layoutY="826.0" opacity="0.89" prefHeight="26.0" prefWidth="125.0" text="Used weight :" textFill="WHITE">
+      <Label layoutX="770.0" layoutY="826.0" opacity="0.89" prefHeight="26.0" prefWidth="140.0" text="Unsed weight :" textFill="WHITE">
          <font>
             <Font name="Amaranth Bold" size="20.0" />
          </font>
